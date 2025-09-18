@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cpvpiys3h2s81"]
+
+[ext_resource type="SystemFont" uid="uid://c7sfrn42mxejq" path="res://scenes/ellyality_inventory_demo/DefaultFont.tres" id="1_owlqt"]
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_owlqt")
+default_font_size = 24

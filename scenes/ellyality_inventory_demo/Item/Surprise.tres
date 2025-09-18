@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Consumables" load_steps=9 format=3 uid="uid://8m8150riu3qs"]
+
+[ext_resource type="Script" uid="uid://cdgcw3ef8182i" path="res://addons/ellyality_inventory/Effect/ItemUseEffect.gd" id="1_rk13d"]
+[ext_resource type="Script" uid="uid://c0nt3ee5v8lp2" path="res://addons/ellyality_inventory/Struct/ItemStack.gd" id="2_d7cdi"]
+[ext_resource type="Script" uid="uid://cxrotao5wdsf" path="res://addons/ellyality_inventory/Item/Use/Consumables.gd" id="2_lpg7f"]
+[ext_resource type="Script" uid="uid://c132vpwpa4ne5" path="res://addons/ellyality_inventory/Effect/GainItem.gd" id="3_d7cdi"]
+[ext_resource type="Resource" uid="uid://bk32lpgtk00k4" path="res://scenes/ellyality_inventory_demo/Item/Trash.tres" id="3_dh75a"]
+[ext_resource type="Texture2D" uid="uid://cki1fyslhfd1q" path="res://scenes/ellyality_inventory_demo/Icon/pouch-with-beads.png" id="5_dh75a"]
+
+[sub_resource type="Resource" id="Resource_gwrkx"]
+script = ExtResource("2_d7cdi")
+Item = ExtResource("3_dh75a")
+Amount = 5
+Slot = 0
+metadata/_custom_type_script = "uid://c0nt3ee5v8lp2"
+
+[sub_resource type="Resource" id="Resource_dh75a"]
+script = ExtResource("3_d7cdi")
+Items = Array[ExtResource("2_d7cdi")]([SubResource("Resource_gwrkx")])
+metadata/_custom_type_script = "uid://c132vpwpa4ne5"
+
+[resource]
+script = ExtResource("2_lpg7f")
+Effects = Array[ExtResource("1_rk13d")]([SubResource("Resource_dh75a")])
+Name = "Surpries"
+Icon = ExtResource("5_dh75a")
+StackLimit = 10
+weight = 1
+extraSpace = Array[Vector2i]([])
+metadata/_custom_type_script = "uid://cxrotao5wdsf"

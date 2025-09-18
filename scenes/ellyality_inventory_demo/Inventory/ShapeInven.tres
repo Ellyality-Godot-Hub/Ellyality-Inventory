@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InventoryConfig" load_steps=2 format=3 uid="uid://d3fftbww8t6bk"]
+
+[ext_resource type="Script" uid="uid://b8vp4c3mms1px" path="res://addons/ellyality_inventory/InventoryConfig.gd" id="1_4t3y6"]
+
+[resource]
+script = ExtResource("1_4t3y6")
+ApplyWeight = true
+Type = 1
+Row = 10
+WeightLimit = 100
+Slot = 40
+metadata/_custom_type_script = "uid://b8vp4c3mms1px"

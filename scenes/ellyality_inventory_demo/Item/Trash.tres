@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Etc" load_steps=3 format=3 uid="uid://bk32lpgtk00k4"]
+
+[ext_resource type="Script" uid="uid://dp0nfy3t3ed8j" path="res://addons/ellyality_inventory/Item/Etc.gd" id="1_2nddl"]
+[ext_resource type="Texture2D" uid="uid://bxrgf81rh5s85" path="res://scenes/ellyality_inventory_demo/Icon/diplodocus.png" id="1_nu5st"]
+
+[resource]
+script = ExtResource("1_2nddl")
+Name = "Trash"
+Icon = ExtResource("1_nu5st")
+StackLimit = 10
+weight = 1
+extraSpace = Array[Vector2i]([])
+metadata/_custom_type_script = "uid://dp0nfy3t3ed8j"

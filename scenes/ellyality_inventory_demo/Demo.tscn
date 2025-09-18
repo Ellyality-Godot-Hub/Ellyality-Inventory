@@ -1,3 +1,90 @@
-[gd_scene format=3 uid="uid://dmgb7j84mqhyv"]
+[gd_scene load_steps=3 format=3 uid="uid://dmgb7j84mqhyv"]
 
-[node name="Node3D" type="Node3D"]
+[ext_resource type="Theme" uid="uid://cpvpiys3h2s81" path="res://scenes/ellyality_inventory_demo/GUITheme.tres" id="1_dnuj7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnuj7"]
+bg_color = Color(0.324203, 0.324203, 0.324203, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hotbar_UI" type="GridContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(0, 80)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 6
+columns = 3
+
+[node name="GapLeft" type="BoxContainer" parent="CanvasLayer/Hotbar_UI"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Hotbar" type="Panel" parent="CanvasLayer/Hotbar_UI"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_dnuj7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dnuj7")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Hotbar_UI/Hotbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+
+[node name="Player" type="Label" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Player"
+
+[node name="List" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "List"
+
+[node name="Shape" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Shape"
+
+[node name="Grid" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Grid"
+
+[node name="Other" type="Label" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Player"
+
+[node name="Shop" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Shop"
+
+[node name="Drop" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Drop"
+
+[node name="Gain" type="Button" parent="CanvasLayer/Hotbar_UI/Hotbar/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "Gain"
+
+[node name="GapRight" type="BoxContainer" parent="CanvasLayer/Hotbar_UI"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+mouse_filter = 2
